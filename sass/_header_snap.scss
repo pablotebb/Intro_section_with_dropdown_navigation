@@ -22,7 +22,7 @@
     display: none;
     position: absolute;
     top: 2rem;
-    right: 2.5rem;
+    right: 1rem;
     z-index: 1;
     &:hover {
       cursor: pointer;
@@ -146,7 +146,7 @@
 
 .header-snap-sub-menu {
   // border: 5px solid blue;
-  @include m.sub_menu(100vh, 17.2rem, 0rem, 1rem);
+  @include m.sub_menu(100vh, 17.2rem, 0rem, 0rem);
   .selected {
     // border: 1px solid green;
     padding-top: 1.25rem;
