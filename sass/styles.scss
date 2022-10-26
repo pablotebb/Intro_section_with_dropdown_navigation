@@ -1,0 +1,17 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "initial";
+@use "footer";
+@use "header_snap";
+@use "article_snap";
+
+.main-container {
+  // border: 8px solid red;
+  min-width: v.$Width-mobile;
+  height: v.$Height-mobile;
+  margin: 30px auto 3.75rem;
+  @media (min-width: v.$Width-media) {
+    width: v.$Width-desktop;
+    height: v.$Height-desktop;
+  }
+}

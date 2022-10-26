@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Own css  -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <!-- 🦢🦢🦢 -->
+    <!-- MAIN CONTAINER -->
+    <main class="main-container">
+      <!-- HEADER SNAP -->
+      <div class="wrapper-header">
+        <header class="header-snap">
+          <nav class="header-nav">
+            <img class="header-snap__logo" src="./images/logo.svg" alt="logo" />
+            <ul class="header-snap-menu">
+              <li class="header-snap-menu__item features">
+                <a href="#">Features</a
+                ><img
+                  id="img-features"
+                  src="./images/icon-arrow-down.svg"
+                  alt="arrow down"
+                />
+              </li>
+              <li class="header-snap-menu__item company">
+                <a href="#">Company</a
+                ><img
+                  id="img-company"
+                  src="./images/icon-arrow-down.svg"
+                  alt="arrow down"
+                />
+              </li>
+              <li class="header-snap-menu__item careers">
+                <a href="#">Careers</a>
+              </li>
+              <li class="header-snap-menu__item about">
+                <a href="#">About</a>
+              </li>
+            </ul>
+            <ul class="header-snap-menu2">
+              <li class="header-snap-menu2__item"><a href="#">Login</a></li>
+              <li class="header-snap-menu2__item selected">
+                <a href="#">Register</a>
+              </li>
+            </ul>
+            <img
+              class="header-snap__hamburger"
+              src="./images/icon-menu.svg"
+              alt="hamburger icon"
+            />
+            <img
+              class="header-snap__close"
+              src="./images/icon-close-menu.svg"
+              alt="close icon"
+            />
+            <!-- MODAL-SNAP-SUB-MENU -->
+            <div class="header-snap-sub-menu" media="(min-width: 1200px)">
+              <details>
+                <summary id="arrow-summary-features">
+                  Features
+                  <img
+                    id="arrow-features"
+                    src="./images/icon-arrow-down.svg"
+                    alt="arrow down"
+                  />
+                </summary>
+                <div class="header-snap-sub-menu__background">
+                  <ul>
+                    <li class="header-snap-sub-menu__item">
+                      <figure>
+                        <img src="./images/icon-todo.svg" alt="todo icon" />
+                      </figure>
+                      <a href="#">Todo List</a>
+                    </li>
+                    <li class="header-snap-sub-menu__item">
+                      <figure>
+                        <img
+                          src="./images/icon-calendar.svg"
+                          alt="calendar icon"
+                        />
+                      </figure>
+                      <a href="#">Calendar</a>
+                    </li>
+                    <li class="header-snap-sub-menu__item">
+                      <figure>
+                        <img
+                          src="./images/icon-reminders.svg"
+                          alt="reminders icon"
+                        />
+                      </figure>
+                      <a href="#">Reminders</a>
+                    </li>
+                    <li class="header-snap-sub-menu__item">
+                      <figure>
+                        <img
+                          src="./images/icon-planning.svg"
+                          alt="planning icon"
+                        />
+                      </figure>
+                      <a href="#">Planning</a>
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details>
+                <summary id="arrow-summary-company">
+                  Company
+                  <img
+                    id="arrow-company"
+                    src="./images/icon-arrow-down.svg"
+                    alt="arrow down"
+                  />
+                </summary>
+                <div class="header-snap-sub-menu__background">
+                  <ul>
+                    <li class="header-snap-sub-menu__item">
+                      <a href="#">History</a>
+                    </li>
+                    <li class="header-snap-sub-menu__item">
+                      <a href="#">Our Team</a>
+                    </li>
+                    <li class="header-snap-sub-menu__item">
+                      <a href="#">Blog</a>
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <details>
+                <summary id="arrow-summary-careers">Careers</summary>
+              </details>
+              <details>
+                <summary id="arrow-summary-about">About</summary>
+              </details>
+              <ul>
+                <li class="header-snap-sub-menu__item">
+                  <a href="#">Login</a>
+                </li>
+                <li class="header-snap-sub-menu__item selected">
+                  <a href="#">Register</a>
+                </li>
+              </ul>
+            </div>
+            <!-- MODAL SUB-MENU END -->
+            <!-- MODAL SUB-MENU FEATURES -->
+            <ul
+              class="header-snap-sub-menu-features"
+              media="(min-width: 1200px)"
+            >
+              <li class="header-snap-sub-menu-features__item">
+                <figure>
+                  <img src="./images/icon-todo.svg" alt="todo icon" />
+                </figure>
+                <a href="#">Todo List</a>
+              </li>
+              <li class="header-snap-sub-menu-features__item">
+                <figure>
+                  <img src="./images/icon-calendar.svg" alt="calendar icon" />
+                </figure>
+                <a href="#">Calendar</a>
+              </li>
+              <li class="header-snap-sub-menu-features__item">
+                <figure>
+                  <img src="./images/icon-reminders.svg" alt="reminders icon" />
+                </figure>
+                <a href="#">Reminders</a>
+              </li>
+              <li class="header-snap-sub-menu-features__item">
+                <figure>
+                  <img src="./images/icon-planning.svg" alt="planning icon" />
+                </figure>
+                <a href="#">Planning</a>
+              </li>
+            </ul>
+            <!-- MODAL SUB-MENU END FEATURES -->
+            <!-- MODAL SUB-MENU COMPANY -->
+            <ul
+              class="header-snap-sub-menu-company"
+              media="(min-width: 1200px)"
+            >
+              <li class="header-snap-sub-menu-company__item">
+                <a href="#">History</a>
+              </li>
+              <li class="header-snap-sub-menu-company__item">
+                <a href="#">Our Team</a>
+              </li>
+              <li class="header-snap-sub-menu-company__item">
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+            <!-- MODAL SUB-MENU END COMPANY -->
+          </nav>
+        </header>
+      </div>
+      <!-- ARTICLE SNAP -->
+      <div class="article-snap">
+        <div class="article-snap-container-picture">
+          <picture class="article-snap-picture">
+            <source
+              class="article-snap-picture__source"
+              media="(min-width: 600px)"
+              srcset="./images/image-hero-desktop.png"
+            />
+            <img
+              class="article-snap-picture__image"
+              src="./images/image-hero-mobile.png"
+              alt="hero icon mobile"
+            />
+          </picture>
+        </div>
+        <article class="article-snap-text">
+          <h1 class="article-snap-text__title">Make remote work</h1>
+          <p class="article-snap-text__description">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="article-snap-text__button">Learn more</button>
+          <div class="article-snap-text__social-networks">
+            <figure>
+              <img src="./images/client-databiz.svg" alt="databiz icon" />
+            </figure>
+            <figure>
+              <img src="./images/client-audiophile.svg" alt="audiophile icon" />
+            </figure>
+            <figure>
+              <img src="./images/client-meet.svg" alt="meet icon" />
+            </figure>
+            <figure>
+              <img src="./images/client-maker.svg" alt="maker icon" />
+            </figure>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#" target="_blank">Pablo Belda</a>.
+    </footer>
+
+    <!-- OWN JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

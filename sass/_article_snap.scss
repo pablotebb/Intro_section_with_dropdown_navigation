@@ -1,0 +1,146 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.article-snap {
+  // border: 8px solid green;
+  width: 100%;
+  @media (min-width: v.$Width-media) {
+    // width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    // gap: 210px;
+  }
+}
+
+.article-snap-container-picture {
+  // border: 4px solid red;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: v.$Width-media) {
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+  @media (min-width: v.$Width-maxim) {
+    // border: 1px solid red;
+    // height: 50px;
+  }
+}
+
+.article-snap-picture {
+  // border: 1px solid black;
+  margin-bottom: 3rem;
+  // transition: all 0.4s ease-in-out;
+  // width: 50%;
+  &__source {
+    // border: 1px solid red;
+    width: 50%;
+    height: 120px;
+  }
+  &__image {
+    width: 100%;
+  }
+  @media (min-width: v.$Width-media) {
+    // border: 5px solid blue;
+    // width: 79%;
+    flex: 1;
+    // width: 40%px;
+    &__source {
+      // border: 1px solid red;
+      width: 100%;
+    }
+    &__image {
+      // border: 5px solid green;
+      width: 100%;
+    }
+  }
+  @media (min-width: v.$Width-maxim) {
+    // border: 1px solid red;
+    &__image {
+      width: 70%;
+    }
+  }
+}
+
+.article-snap-text {
+  // border: 8px solid green;
+  flex: 1;
+  @include m.article_snap_text;
+  &__button {
+    &:hover {
+      cursor: pointer;
+      background-color: v.$almost-white;
+      color: v.$almost-black;
+      border-color: v.$almost-black;
+    }
+  }
+  @media (min-width: v.$Width-media) {
+    // border: 8px solid;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 13.75rem;
+
+    @include m.article_snap_text(
+      2em,
+      0.9em,
+      1.52rem,
+      // sides
+      0.8em,
+      1.25rem,
+      1.25rem,
+      // sides
+      1.7em,
+      1.25rem,
+      left,
+      v.$almost-black,
+      v.$almost-white,
+      v.$almost-black,
+      5rem
+    );
+    &__button {
+      // border: 4px solid green;
+      margin-left: 1.1875rem;
+      &:hover {
+        cursor: pointer;
+        background-color: v.$almost-white;
+        color: v.$almost-black;
+      }
+    }
+  }
+
+  @media (min-width: v.$Width-maxim) {
+    // border: 1px solid green;
+    margin-bottom: 0;
+    margin-left: 8.75rem;
+    @include m.article_snap_text(
+      3.9em,
+      1.2em,
+      1.52rem,
+      // sides
+      1rem,
+      1.25rem,
+      1.25rem,
+      // sides
+      1.22rem,
+      1.25rem,
+      left,
+      v.$almost-black,
+      v.$almost-white,
+      v.$almost-black,
+      5rem
+    );
+    &__title {
+      // border: 1px solid red;
+      margin-right: 7.4rem;
+    }
+    &__button {
+      // border: 4px solid green;
+      margin-left: 19px;
+    }
+  }
+}

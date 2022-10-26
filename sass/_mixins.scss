@@ -1,0 +1,203 @@
+@use "variables" as v;
+// @use "mixins" as m;
+
+@mixin button_header(
+  $background-color: v.$almost-white,
+  $color: v.$almost-black,
+  $border: transparent,
+  $padding1: 0.625rem,
+  $padding2: 1rem,
+  $font-size: 0.8em
+) {
+  padding: $padding1 $padding2;
+  border-radius: 1rem;
+  border: none;
+  background-color: $background-color;
+  color: $color;
+  font-size: $font-size;
+  font-weight: 700;
+  border: 0.0625rem solid $border;
+}
+
+@mixin sub_menu(
+  $height: 19.375rem,
+  $width: 21.25rem,
+  $top: 6.25rem,
+  $right: 0.875rem,
+  $padding_top: 6rem
+) {
+  // border: 1px solid red;
+  display: none;
+  position: absolute;
+  top: $top;
+  right: $right;
+  background-color: v.$almost-white;
+  min-height: $height;
+  width: $width;
+  border-radius: 0.375rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  // padding-top: 0.9375rem;
+  padding-top: $padding_top;
+  padding-bottom: 0.9375rem;
+  padding-left: 0.9375rem;
+  // list-style: none;
+  &__item {
+    // border: 1px solid red;
+    list-style: none;
+    // margin-bottom: 16px;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: v.$almost-black;
+      // font-weight: 700;
+      font-size: 0.8em;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@mixin article_desinged_future($text-align: center, $padding: 2.5rem) {
+  padding: $padding;
+  text-align: $text-align;
+  line-height: 1.5625rem;
+  &__title {
+    font-size: 1.6em;
+    margin-bottom: 0.9375rem;
+    color: v.$Very-dark-blue-headings;
+    line-height: 1.75rem;
+  }
+  &__description {
+  }
+}
+
+@mixin list_blogr($apply) {
+  @if ($apply == 1) {
+    .section-product {
+      // border: 1px solid yellow;
+      @include section_title();
+    }
+
+    .section-product-ul {
+      @include section_list();
+    }
+  }
+
+  @if ($apply == 2) {
+    .section-company {
+      // border: 1px solid yellow;
+      @include section_title();
+    }
+
+    .section-company-ul {
+      @include section_list();
+    }
+  }
+
+  @if ($apply == 3) {
+    .section-connect {
+      // border: 1px solid yellow;
+      @include section_title();
+    }
+
+    .section-connect-ul {
+      @include section_list();
+    }
+  }
+}
+
+@mixin section_title() {
+  &__title {
+    // border: 1px solid yellow;
+    margin-top: 1.875rem;
+    font-size: 1em;
+    color: v.$almost-black;
+    text-align: center;
+    margin-bottom: 0.9375rem;
+  }
+}
+
+@mixin section_list() {
+  // border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.5625rem;
+  &__item {
+    list-style: none;
+    a {
+      font-size: 1em;
+      color: v.$almost-black;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@mixin article_snap_text(
+  $Font-size-title: 1.8em,
+  $Font-size-description: 0.8em,
+  $P_title_up: 1.25rem,
+  $P_title_sides: 0.625rem,
+  $P_title_down: 1.25rem,
+  $P_description_up: 1.25rem,
+  $P_description_sides: 1.875rem,
+  $P_description_down: 1.25rem,
+  $Text-align: center,
+  $Button-back: v.$almost-black,
+  $Button-letter: v.$almost-white,
+  $Button-border: transparent,
+  $Width-social-networks: 3.125rem
+) {
+  &__title {
+    font-size: $Font-size-title;
+    padding: $P_title_up $P_title_sides $P_title_down;
+    text-align: $Text-align;
+  }
+  &__description {
+    font-size: $Font-size-description;
+    padding: $P_description_up $P_description_sides $P_description_down;
+    text-align: $Text-align;
+  }
+  &__button {
+    @include button_header($Button-back, $Button-letter, $Button-border);
+    display: block;
+    margin: auto;
+  }
+  &__social-networks {
+    margin-top: 1.875rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    figure {
+      img {
+        width: $Width-social-networks;
+      }
+    }
+  }
+}
+
+@mixin floating_menu_item() {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-center;
+  align-items: center;
+  width: 140px;
+  gap: 15px;
+}
+
+@mixin modal-menu-background {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: v.$black-modal;
+}
